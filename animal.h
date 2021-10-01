@@ -1,6 +1,7 @@
 #include <memory>
 
-class Animal {
+class Animal
+{
 public:
     void eat(int calories);
     int getfullness();
@@ -10,12 +11,12 @@ public:
     Animal();
     ~Animal();
 
-    Animal(Animal&&);
-    Animal& operator=(Animal&&);
+    Animal(Animal &&);
+    Animal &operator=(Animal &&);
 
     // copy constructor
-    Animal(const Animal&) = delete;
-    Animal& operator=(const Animal&) = delete;
+    Animal(const Animal &) = delete;
+    Animal &operator=(const Animal &) = delete;
 
     static const int MAX_FULLNESS = 100;
 

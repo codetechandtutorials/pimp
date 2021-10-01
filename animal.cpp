@@ -5,8 +5,10 @@ class Animal::impl
 public:
     int fullness = 10;
 
-    void eat(Animal& a, int calories) { 
-        if (a.isAlive()) {
+    void eat(Animal &a, int calories)
+    {
+        if (a.isAlive())
+        {
             fullness += calories;
             if (fullness > Animal::MAX_FULLNESS)
             {
@@ -14,16 +16,16 @@ public:
             }
         }
     }
-
 };
 
 Animal::Animal() : pImpl(std::make_unique<impl>()) {}
 
 Animal::~Animal() = default;
-Animal::Animal(Animal&&) = default;
-Animal& Animal::operator=(Animal&&) = default;
+Animal::Animal(Animal &&) = default;
+Animal &Animal::operator=(Animal &&) = default;
 
-bool Animal::isAlive() {
+bool Animal::isAlive()
+{
     return true;
 }
 
