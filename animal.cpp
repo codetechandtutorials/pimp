@@ -20,7 +20,7 @@ public:
 Animal::Animal() : pImpl(std::make_unique<impl>()) {}
 
 Animal::~Animal() = default;
-Animal::Animal(Animal&& a) = default;
+Animal::Animal(Animal&&) = default;
 Animal& Animal::operator=(Animal&&) = default;
 
 bool Animal::isAlive() {

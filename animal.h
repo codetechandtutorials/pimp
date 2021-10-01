@@ -10,12 +10,12 @@ public:
     Animal();
     ~Animal();
 
-    Animal(Animal&& a);
+    Animal(Animal&&);
     Animal& operator=(Animal&&);
 
     // copy constructor
-    Animal(const Animal& a);
-    Animal& operator=(const Animal&);
+    Animal(const Animal&) = delete;
+    Animal& operator=(const Animal&) = delete;
 
     static const int MAX_FULLNESS = 100;
 
